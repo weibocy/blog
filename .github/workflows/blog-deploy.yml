@@ -26,6 +26,11 @@ jobs:
           echo "Node version is `node -v`"
           echo "Yarn version is `yarn -v`"
 
+      - name: Checkout repository with submodules
+        run: |
+          git submodule init
+          git submodule update --recursive
+
       - name: Build & Deploy
         run: |
           git config --global user.name "GitHub Action"
