@@ -106,6 +106,6 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: git@github.com:weibocy/blog.git
+  repo: git@github.com:weibocy/blog.git,main
   branch: 'gh-pages'
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})"
