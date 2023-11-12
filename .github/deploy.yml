@@ -1,0 +1,29 @@
+name: Deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: "main"
+
+      - name: deploy to gh-pages
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+  
+          git checkout gh-pages
+          git rm -rf .
+          cp -r public/* .
+          git add .
+          git commit -m "Deploy to gh-pages"
+          git push origin gh-pages
+

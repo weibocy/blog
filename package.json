@@ -7,6 +7,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "gh-deploy": "gh-pages --dist 'public' --branch 'gh-pages'",
     "server": "hexo server"
   },
   "hexo": {
@@ -14,12 +15,14 @@
   },
   "dependencies": {
     "hexo": "^7.0.0",
+    "hexo-abbrlink": "^2.2.1",
     "hexo-auto-category": "^0.2.2",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-link-obsidian": "^1.1.7",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-pug": "^3.0.0",
@@ -28,6 +31,7 @@
     "hexo-theme-landscape": "^1.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "husky": "^8.0.3"
   }
 }

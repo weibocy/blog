@@ -120,3 +120,7 @@ deploy:
 auto_category:
   enable: true
   depth:
+
+# Link Obsidian
+easy_images:
+  port: 3333 # 必须和obsidian插件中的端口相匹配 Must be same as link-to-obsidian server port
